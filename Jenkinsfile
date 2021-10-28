@@ -7,7 +7,7 @@ pipeline {
 
     stages {
         stage('Test') {
-            paralell {
+            parallel {
                 stage('Unit Tests') {
                     steps {
                         sh './mvnw test -D testGroups=unit'
